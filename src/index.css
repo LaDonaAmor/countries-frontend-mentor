@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito Sans", sans-serif;
+  /* Add your custom colors here if needed */
+}
