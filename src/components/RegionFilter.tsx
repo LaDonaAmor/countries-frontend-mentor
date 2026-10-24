@@ -1,3 +1,5 @@
+import { ChevronDown } from 'lucide-react'
+
 type RegionFilterProps = {
   value: string
   onChange: (region: string) => void
@@ -18,20 +20,29 @@ export function RegionFilter({ value, onChange }: RegionFilterProps) {
         Filter by region
       </label>
 
-      <select
-        id="region-filter"
-        value={value}
-        onChange={(event) => onChange(event.target.value)}
-        className="bg-surface text-text w-full rounded-md px-5 py-4 shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-900 dark:focus-visible:ring-white"
-      >
-        <option value="">Filter by Region</option>
+      <div className="relative">
+        <select
+          id="region-filter"
+          value={value}
+          onChange={(event) => onChange(event.target.value)}
+          className="bg-surface text-text w-full appearance-none rounded-md py-3 pr-10 pl-4 text-sm shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-900 dark:focus-visible:ring-white"
+        >
+          <option value="">Filter by Region</option>
 
-        {regions.map((region) => (
-          <option key={region.value} value={region.value}>
-            {region.label}
-          </option>
-        ))}
-      </select>
+          {regions.map((region) => (
+            <option key={region.value} value={region.value}>
+              {region.label}
+            </option>
+          ))}
+        </select>
+
+        <ChevronDown
+          size={16}
+          strokeWidth={1.8}
+          aria-hidden="true"
+          className="text-text pointer-events-none absolute top-1/2 right-3 -translate-y-1/2"
+        />
+      </div>
     </div>
   )
 }
