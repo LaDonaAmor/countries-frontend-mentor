@@ -1,6 +1,41 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
-  --font-sans: "Nunito Sans", sans-serif;
-  /* Add your custom colors here if needed */
+  --font-sans: 'Nunito Sans', sans-serif;
+
+  --color-blue-900: hsl(209 23% 22%);
+  --color-blue-950: hsl(207 26% 17%);
+
+  --color-grey-950: hsl(200 15% 8%);
+  --color-grey-400: hsl(0 0% 50%);
+  --color-grey-50: hsl(0 0% 99%);
+
+  --color-white: hsl(0 100% 100%);
+}
+
+@theme inline {
+  --color-page-bg: var(--page-bg);
+  --color-surface: var(--surface);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+:root {
+  color-scheme: light;
+
+  --page-bg: var(--color-grey-50);
+  --surface: var(--color-white);
+  --text: var(--color-grey-950);
+  --muted: var(--color-grey-400);
+}
+
+:root {
+  color-scheme: dark;
+
+  --page-bg: var(--color-blue-950);
+  --surface: var(--color-blue-900);
+  --text: var(--color-white);
+  --muted: var(--color-white);
 }

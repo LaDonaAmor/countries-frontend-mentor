@@ -1,11 +1,11 @@
-function App() {
-  return (
-    <main className="min-h-screen bg-gray-100 flex items-center justify-center">
-      <h1 className="text-3xl font-bold text-blue-600 underline font-sans">
-        Countries App Setup Complete!
-      </h1>
-    </main>
-  );
-}
+import { Header } from './components/Header'
 
-export default App;
+export default function App() {
+  return (
+    <div className="app-container">
+      <Header />
+
+      <main className="mx-auto min-h-screen max-w-7xl px-4 sm:px-6 lg:px-8" />
+    </div>
+  )
+}
