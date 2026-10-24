@@ -26,14 +26,17 @@ export function findCountriesByBorderCodes(
 export function filterCountries(
   countriesToFilter: Country[],
   searchText: string,
+  selectedRegion: string,
 ): Country[] {
   const query = searchText.trim().toLowerCase()
 
-  if (!query) {
-    return countriesToFilter
-  }
+  return countriesToFilter.filter((country) => {
+    const matchesSearch =
+      query === '' || country.name.toLowerCase().includes(query)
 
-  return countriesToFilter.filter((country) =>
-    country.name.toLowerCase().includes(query),
-  )
+    const matchesRegion =
+      selectedRegion === '' || country.region === selectedRegion
+
+    return matchesSearch && matchesRegion
+  })
 }
