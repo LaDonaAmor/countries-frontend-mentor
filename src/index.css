@@ -20,7 +20,7 @@
   --color-muted: var(--muted);
 }
 
-@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
   color-scheme: light;
@@ -31,11 +31,11 @@
   --muted: var(--color-grey-400);
 }
 
-:root {
+.dark {
   color-scheme: dark;
 
   --page-bg: var(--color-blue-950);
   --surface: var(--color-blue-900);
   --text: var(--color-white);
-  --muted: var(--color-white);
+  --muted: rgb(255 255 255 / 75%);
 }
