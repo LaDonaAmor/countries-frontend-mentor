@@ -22,3 +22,18 @@ export function findCountriesByBorderCodes(
     .map((code) => findCountryByCode(code))
     .filter((country): country is Country => country !== undefined)
 }
+
+export function filterCountries(
+  countriesToFilter: Country[],
+  searchText: string,
+): Country[] {
+  const query = searchText.trim().toLowerCase()
+
+  if (!query) {
+    return countriesToFilter
+  }
+
+  return countriesToFilter.filter((country) =>
+    country.name.toLowerCase().includes(query),
+  )
+}
