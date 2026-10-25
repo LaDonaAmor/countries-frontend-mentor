@@ -1,75 +1,47 @@
-# React + TypeScript + Vite
+# Frontend Mentor - REST Countries with color theme switcher
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A country browser built for the Frontend Mentor REST Countries challenge.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### Features
 
-## React Compiler
+- Browse countries
+- Search by country name
+- Filter by region
+- Open a country detail page
+- Navigate to bordering countries
+- Switch between light and dark themes
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Screenshot
 
-## Expanding the ESLint configuration
+![Countries app screenshot](public/image.png)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Links
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Live Site: [[Rest Countries](https://countries-frontend-mentor.vercel.app/)]
+- Frontend Mentor solution: [Add your solution URL]
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Built with
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React
+- TypeScript
+- React Router
+- Tailwind CSS
+- Vite
 
-```
+## What I learned
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+I practiced describing the country data with TypeScript, separating lookup and filtering logic from React components, and combining search and region filters. I also worked with client-side routing, theme persistence, and responsive layouts.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Continued development
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+I want to keep improving keyboard accessibility, test the interface at narrow viewport widths, and explore putting the search and region filters in the URL.
 
-```
+## AI collaboration
+
+I used ClaudeAI to discuss milestone requirements, review TypeScript errors, and get explanations and example code. I made the implementation decisions and should describe here what I adapted, verified, or changed while building the project.
+
+## Author
+
+- Frontend Mentor: [@LaDonaAmor](https://www.frontendmentor.io/profile/LaDonaAmor)

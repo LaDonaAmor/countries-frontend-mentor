@@ -20,7 +20,7 @@ export function BorderCountries({ borders }: BorderCountriesProps) {
               <Link
                 to={`/country/${country.alpha3Code}`}
                 state={{ from: location.pathname }}
-                className="bg-surface text-text inline-block min-w-24 rounded-sm px-5 py-2 text-center text-sm shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900 dark:focus-visible:outline-white"
+                className="bg-surface text-text inline-block min-w-24 rounded-sm px-5 py-2 text-center text-sm shadow-sm hover:bg-blue-900 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-900 dark:hover:bg-blue-950 dark:focus-visible:outline-white"
               >
                 {country.name}
               </Link>

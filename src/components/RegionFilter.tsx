@@ -25,7 +25,7 @@ export function RegionFilter({ value, onChange }: RegionFilterProps) {
           id="region-filter"
           value={value}
           onChange={(event) => onChange(event.target.value)}
-          className="bg-surface text-text w-full appearance-none rounded-md py-3 pr-10 pl-4 text-sm shadow-sm outline-none focus-visible:ring-2 focus-visible:ring-blue-900 dark:focus-visible:ring-white"
+          className="bg-surface text-text w-full appearance-none rounded-md py-3 pr-10 pl-4 text-sm shadow-sm outline-none hover:shadow-md focus-visible:ring-2 focus-visible:ring-blue-900 dark:focus-visible:ring-white"
         >
           <option value="">Filter by Region</option>
 
