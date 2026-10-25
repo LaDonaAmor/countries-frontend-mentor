@@ -1,6 +1,7 @@
 import { Link, useParams } from 'react-router-dom'
 import { BackButton } from '../components/BackButton'
 import { findCountryByCode } from '../lib/countries'
+import { BorderCountries } from '../components/BorderCountries'
 import {
   formatCurrencies,
   formatLanguages,
@@ -84,6 +85,7 @@ export function CountryDetail() {
               </div>
             </dl>
           </div>
+          <BorderCountries borders={country.borders} />
         </section>
       </div>
     </main>
