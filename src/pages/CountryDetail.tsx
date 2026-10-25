@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { BackButton } from '../components/BackButton'
 import { findCountryByCode } from '../lib/countries'
@@ -12,6 +13,12 @@ import {
 export function CountryDetail() {
   const { code } = useParams<{ code: string }>()
   const country = code ? findCountryByCode(code.toUpperCase()) : undefined
+
+  useEffect(() => {
+    document.title = country
+      ? `${country.name} | REST Countries`
+      : 'Country not found | REST Countries'
+  }, [country])
 
   if (!country) {
     return (

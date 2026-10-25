@@ -11,9 +11,9 @@ export function CountryCard({ country }: CountryCardProps) {
     <Link
       to={`/country/${country.alpha3Code}`}
       state={{ from: '/' }}
-      className="block max-w-66 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-900 dark:focus-visible:outline-white"
+      className="group block max-w-66 rounded-md focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-900 dark:focus-visible:outline-white"
     >
-      <article className="bg-surface text-text max-w-66 overflow-hidden rounded-md shadow-sm">
+      <article className="bg-surface text-text max-w-66 overflow-hidden rounded-md shadow-sm transition-shadow group-hover:shadow-lg">
         <img
           src={country.flags.svg || country.flags.png}
           alt={`Flag of ${country.name}`}
